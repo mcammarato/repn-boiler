@@ -19,6 +19,7 @@ const db = require('knex')({
     port: process.env.PGPORT,
     user: process.env.PGUSER,
     password: process.env.PGPASSWORD,
+    ssl: { rejectUnauthorized: false }
   },
 });
 

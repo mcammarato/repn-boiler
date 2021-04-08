@@ -13,6 +13,16 @@ router.get('/getAddresses', (req, res) => {
   });
 });
 
+// Get Users
+router.get('/users', (req, res) => {
+  db.select()
+  .from('public.users')
+  .limit(10)
+  .then((data) => {
+    res.send(data);
+  });
+});
+
 // api/v1/aw/test
 router.get('/test', (req, res) => {
   res.json({
